@@ -1,3 +1,10 @@
+# This code is a part of ModInfo, and is released under the Perl Artistic 
+#  License.
+# Copyright 2002 by James Tillman and Todd Cushard. See README and COPYING
+# for more information, or see 
+#  http://www.perl.com/pub/a/language/misc/Artistic.html.
+# $Id: ModInfo.pm,v 1.6 2002/08/17 23:23:46 jtillman Exp $
+
 #TODO
 #check that RETVAL is getting processed when doing reading in XML for functions
 #
@@ -51,8 +58,8 @@ require Exporter;
 # MODINFO parent_class AutoLoader
 @ISA = qw(Exporter AutoLoader);
 @EXPORT = qw();
-# MODINFO version 0.01
-$VERSION = '0.01';
+# MODINFO version 0.05
+$VERSION = '0.05';
 
 
 # Preloaded methods go here.

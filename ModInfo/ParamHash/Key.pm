@@ -1,3 +1,10 @@
+# This code is a part of ModInfo, and is released under the Perl Artistic 
+#  License.
+# Copyright 2002 by James Tillman and Todd Cushard. See README and COPYING
+# for more information, or see 
+#  http://www.perl.com/pub/a/language/misc/Artistic.html.
+# $Id: Key.pm,v 1.3 2002/08/17 23:25:23 jtillman Exp $
+
 # MODINFO module Devel::ModInfo::ParamHash::Key
 package Devel::ModInfo::ParamHash::Key;
 
@@ -13,8 +20,7 @@ require Exporter;
 @ISA = qw(Exporter AutoLoader Devel::ModInfo::Parameter);
 @EXPORT = qw();
 # MODINFO version 0.01
-$VERSION = '0.01';
-
+($VERSION) = ' $Revision: 1.3 $ ' =~ /\$Revision:\s+([^\s]+)/;
 
 # Preloaded methods go here.
 # MODINFO function new

@@ -1,6 +1,8 @@
 Changes
 Makefile.PL
 MANIFEST
+COPYING
+README
 ModInfo.pm
 ModInfo/DataType.pm
 ModInfo/Dependency.pm

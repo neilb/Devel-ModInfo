@@ -1,3 +1,10 @@
+# This code is a part of ModInfo, and is released under the Perl Artistic 
+#  License.
+# Copyright 2002 by James Tillman and Todd Cushard. See README and COPYING
+# for more information, or see 
+#  http://www.perl.com/pub/a/language/misc/Artistic.html.
+# $Id: Tutorial.pod,v 1.2 2002/08/17 23:24:17 jtillman Exp $
+
 =head1 ModInfo - A Perl Interface Definition System
 
 =head2 Purpose

@@ -25,7 +25,7 @@ test_convert() ? print "ok 2\n" : print "not ok 2\n";
 
 
 sub test_convert {
-	system('perl pl2modinfo.pl -c -i ex/MyModule.pm -o ex/MyModule.test');
+	system('perl pl2modinfo -c -i ex/MyModule.pm -o ex/MyModule.test');
 	open(COMP, "ex/MyModule.commented") or die "Missing kit component.  Couldn't located comparison file ex/MyModule.commented";
 	open(TEST, "ex/MyModule.commented") or return 0;
 	while(my $comp = <COMP>) {

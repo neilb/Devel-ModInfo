@@ -15,6 +15,11 @@ WriteMakefile(
     },
     'EXE_FILES'	      => ['pl2modinfo', 'modinfo2html', 'modinfo2embpod', 'modinfo2xml', 'modinfo2embpod.tt', 'modinfo2html.tt', 'modinfo2html_idx.tt'],
     'clean'       => { FILES => '$(EXE_FILES)' },
+    PREREQ_PM   => {
+        'XML::DOM'          => '0',
+	'Template' => '0',
+	'Parse::RecDescent' => '0',
+    },
 );
 
 sub MY::postamble {

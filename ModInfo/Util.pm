@@ -1,5 +1,15 @@
+# This code is a part of ModInfo, and is released under the Perl Artistic 
+#  License.
+# Copyright 2002 by James Tillman and Todd Cushard. See README and COPYING
+# for more information, or see 
+#  http://www.perl.com/pub/a/language/misc/Artistic.html.
+# $Id: Util.pm,v 1.4 2002/08/17 23:24:17 jtillman Exp $
+
 # MODINFO module Devel::ModInfo::Util
 package Devel::ModInfo::Util;
+
+# MODINFO dependency module strict
+use strict;
 
 # MODINFO dependency module IO::File
 use IO::File;
@@ -9,7 +19,8 @@ use Parse::RecDescent;
 use XML::DOM;
 # MODINFO dependency module Data::Dumper
 use Data::Dumper;
-
+# MODINFO dependency module vars
+use vars qw/ @ISA @EXPORT_OK $VERSION /;
 
 # MODINFO dependency module Exporter
 require Exporter;
@@ -17,6 +28,8 @@ require Exporter;
 @ISA = qw/ Exporter /;
 @EXPORT_OK = qw/ parse_modinfo_file parse_modinfo_multiline parse_modinfo_line 
 	convert_modinfo_to_xml /;
+
+($VERSION) = ' $Revision: 1.4 $ ' =~ /\$Revision:\s+([^\s]+)/;
 
 my $error;
 my $parser = new Parse::RecDescent(grammar());
@@ -42,6 +55,7 @@ sub parse_modinfo_file {
 	my($file, $include_code, $no_die) = @_;
 	my @output;
 	my $handle = to_filehandle($file) or die "Couldn't convert $file to filehandle: $!";
+	my $done;
 	while (my $line = <$handle>) {
 		$done = 1 if $line =~ /^\_\_(END|DATA)\_\_/;
 		if (!$done) {
@@ -187,7 +201,7 @@ sub convert_modinfo_to_xml {
 		chomp $directive;
 		exit if $directive eq '';
 		while($directive =~ s/\\\s*$//) {
-			$line = <STDIN>;
+			my $line = <STDIN>;
 			$line =~ s/^#//;
 			$directive .= $line;
 		}

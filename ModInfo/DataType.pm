@@ -1,9 +1,21 @@
+# This code is a part of ModInfo, and is released under the Perl Artistic 
+#  License.
+# Copyright 2002 by James Tillman and Todd Cushard. See README and COPYING
+# for more information, or see 
+#  http://www.perl.com/pub/a/language/misc/Artistic.html.
+# $Id: DataType.pm,v 1.3 2002/08/17 23:24:17 jtillman Exp $
+
 # MODINFO module Devel::ModInfo::DataType
 package Devel::ModInfo::DataType;
+
+use strict;
+use vars qw/ @ISA @EXPORT_OK $VERSION /;
 
 # MODINFO parent_class Exporter
 @ISA = ('Exporter');
 @EXPORT_OK = qw( String2DataType );
+
+($VERSION) = ' $Revision: 1.3 $ ' =~ /\$Revision:\s+([^\s]+)/;
 
 # MODINFO function SCALAR
 # MODINFO retval STRING

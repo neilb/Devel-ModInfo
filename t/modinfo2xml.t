@@ -23,7 +23,7 @@ test_convert() ? print "ok 2\n" : print "not ok 2\n";
 
 
 sub test_convert {
-	system('perl modinfo2xml.pl -i ex/MyModule.commented -o ex/MyModule.mfo.test');
+	system('perl modinfo2xml -i ex/MyModule.commented -o ex/MyModule.mfo.test');
 	open(COMP, "ex/MyModule.mfo") or die "Missing kit component.  Couldn't located comparison file ex/MyModule.mfo";
 	open(TEST, "ex/MyModule.mfo.test") or return 0;
 	while(my $comp = <COMP>) {

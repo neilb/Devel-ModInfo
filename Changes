@@ -1,8 +1,15 @@
 Revision history for Perl extension ModInfo.
 
+0.02  
+	+ Added README
+	+ Added COPYING (Artistic License)
+	+ Added License Statement to all code files
+	+ Changed versioning convention on all code files
+	+ Added modinfo2embpod.PL to the MANIFEST
+
 0.01  Mon May 21 12:15:25 2001
 	- original version; created by h2xs 1.19
 
 0.01  Wed Aug 08 12:05:00 2001
 	+ Added modinfo2embpod.tt
-	+ Added modinfo2embpod.pl
+	+ Added modinfo2embpod.PL
