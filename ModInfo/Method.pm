@@ -1,0 +1,72 @@
+# MODINFO module Devel::ModInfo::Method
+package Devel::ModInfo::Method;
+
+# MODINFO dependency module strict
+use strict;
+# MODINFO dependency module vars
+use vars qw($VERSION @ISA @EXPORT @EXPORT_OK);
+
+# MODINFO dependency module Devel::ModInfo::Function
+require Devel::ModInfo::Function;
+# MODINFO dependency module Exporter
+require Exporter;
+
+# MODINFO parent_class Devel::ModInfo::Function
+@ISA = qw(Exporter AutoLoader Devel::ModInfo::Function);
+@EXPORT = qw();
+# MODINFO version 0.01
+$VERSION = '0.01';
+
+
+# Preloaded methods go here.
+# MODINFO constructor new
+sub new{
+	my ($class, %attribs) = @_;
+	
+	#Call superclass
+	my $self  = $class->SUPER::new(%attribs);
+
+	return bless $self => $class;
+}
+
+1;
+
+__END__
+
+
+
+=head1 Devel::ModInfo::Method
+
+Devel::ModInfo::Method - Defines an object-oriented function that can be accessed in 
+a Perl module
+
+=head1 SYNOPSIS
+
+Not meant to be used outside the ModInfo system.
+  
+=head1 DESCRIPTION
+
+Devel::ModInfo::Method provides the name, description, and parameters for a method in 
+a Perl module.  It is not meant to model non-object-oriented functions, 
+which are instead handled by ModInfo::Function.
+
+=head1 AUTHOR
+
+jtillman@bigfoot.com
+tcushard@bigfoot.com
+
+=head1 SEE ALSO
+
+Devel::ModInfo::Tutorial
+
+Devel::ModInfo::Function
+
+Devel::ModInfo::Parameter
+
+Devel::ModInfo::ParamHash
+
+Devel::ModInfo::ParamArray
+
+perl(1).
+
+=cut
